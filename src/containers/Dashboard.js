@@ -8,11 +8,11 @@ class Dashboard extends Component {
         <section>
           <article className="pinnedCityCard">
             <div>Weather data</div>
-            <p><a href="#">View Extended Forecast</a></p>
+            <p><Link to="/detailedcity">View Extended Forecast</Link></p>
           </article>
           <article className="pinnedCityCard">
             <div>Weather data</div>
-            <p><a href="#">View Extended Forecast</a></p>
+            <p><Link to="/detailedcity">View Extended Forecast</Link></p>
           </article>
           <article className="pinnedCityCard">
             <h2>➕ Pin another city</h2>
