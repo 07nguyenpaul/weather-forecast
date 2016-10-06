@@ -1,27 +1,31 @@
-*OpenWeather API Stuff*
+# OpenWeather API Stuff
 
 our open weather key = 391d9430997a4787c74ca34ca02f4dc1
 
+## Call for the 'current location' weather:
+
 api call formula using lat and long:
-api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&APPID={KEY GOES HERE}
+api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&APPID=OUR KEY GOES HERE
 
-api call formula using city ID (OpenWeather's RECOMMENDED method):
-api.openweathermap.org/data/2.5/forecast?id={city ID}&APPID={KEY GOES HERE}
+example call using denver's lat and long:
+http://api.openweathermap.org/data/2.5/weather?lat=39.75078&lon=-104.99626289999999&appid=c6f9cf80abac0cc0d08971b6c53bfc3c
 
-Denver City Id = 5419384
+##Call for the 'pinned cities' weather(s):
 
-Call for Denver 5-day, 3-hour, using city ID:
-api.openweathermap.org/data/2.5/forecast?id=5419384&APPID=391d9430997a4787c74ca34ca02f4dc1
+api call using zip code:
+api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&APPID=OUR KEY GOES HERE
 
-Call for Denver current weather, using city ID:
-api.openweathermap.org/data/2.5/weather?id=5419384&APPID=391d9430997a4787c74ca34ca02f4dc1
+example call using denver's zip:
+http://api.openweathermap.org/data/2.5/weather?zip=80218,us&APPID=391d9430997a4787c74ca34ca02f4dc1
 
-*Geolocation API Stuff*
+
+
+# Geolocation API Stuff
 
 if ("geolocation" in navigator) {
-  geolocation is available
+  geolocation object is available
 } else {
-  geolocation IS NOT available
+  geolocation object IS NOT available
 }
 
 so we can do something like this:
