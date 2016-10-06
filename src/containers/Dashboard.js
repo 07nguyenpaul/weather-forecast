@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 class Dashboard extends Component {
   render() {
@@ -17,7 +18,7 @@ class Dashboard extends Component {
             <h2>➕ Pin another city</h2>
           </article>
         </section>
-        <h3><a href="#">Edit Pinned Cities</a></h3>
+        <h3><Link to="/pinnedcities">Edit Pinned Cities</Link></h3>
       </div>
     );
   }
