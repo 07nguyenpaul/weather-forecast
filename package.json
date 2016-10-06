@@ -4,9 +4,11 @@
   "private": true,
   "devDependencies": {
     "enzyme": "^2.4.1",
+    "node-sass": "^3.10.1",
     "react-addons-test-utils": "^15.3.2",
     "react-scripts": "^0.6.0",
-    "redux-logger": "^2.6.1"
+    "redux-logger": "^2.6.1",
+    "sass-loader": "^4.0.2"
   },
   "dependencies": {
     "react": "^15.3.0",

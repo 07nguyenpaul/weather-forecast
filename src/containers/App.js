@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 
 class App extends Component {
   render() {
@@ -7,9 +7,9 @@ class App extends Component {
       <div>
         <header>
           <h1>Weather Tracker</h1>
-          <section>
-            <p>Current forecast for...</p>
-            <p><a href="#">View Extended Forecast</a></p>
+          <section className="header">
+            <p className="currentForecast">Current forecast for...</p>
+            <p><a className="extendedForecastHeaderLink" href="#">View Extended Forecast</a></p>
           </section>
         </header>
         <div className="dashboardWrapper">
