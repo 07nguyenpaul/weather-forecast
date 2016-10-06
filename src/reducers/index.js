@@ -1,5 +1,3 @@
-'use strict';
-
 const exampleReducer = (state = {}, action) => {
   switch (action.type) {
     default:
