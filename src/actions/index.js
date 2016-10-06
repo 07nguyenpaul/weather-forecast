@@ -5,5 +5,5 @@ export const receiveForecast = (forecastData) => ({
 });
 
 export const fetchForecast = options => dispatch => {
-  // return fetch API call
+  return fetch()
 };
