@@ -1,5 +1,6 @@
 export const RECEIVE_FORECAST = 'RECEIVE_FORECAST';
 import dummyData from '../data/dummyData';
+import store from '../index';
 
 export const receiveForecast = forecastData => {
   return {
@@ -13,6 +14,22 @@ export const fetchZipForecast = (forecastType, zip, key='391d9430997a4787c74ca34
         .then(response =>response.json())
         .then(json => dispatch(receiveForecast(json)));
 };
+
+export const Forcast = function fetchForcast() {
+  return dispatch => {
+    setTimeout(() => {
+      dispatch(receiveForecast());
+    }, 3000);
+  };
+}
+
+// function getMeAnAPI(code) {
+//   return function(dispatch) {
+//     return receiveForecast().then(
+//
+//     )
+//   }
+// }
 
 export const showDummyData = (dummyData) => {
   return {
