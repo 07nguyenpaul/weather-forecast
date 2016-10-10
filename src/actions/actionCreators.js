@@ -15,11 +15,25 @@ export const fetchZipForecast = (forecastType, zip, key='391d9430997a4787c74ca34
         .then(json => dispatch(receiveForecast(json)));
 };
 
+export const Forcast = function fetchForcast() {
+  return dispatch => {
+    setTimeout(() => {
+      dispatch(receiveForecast());
+    }, 3000);
+  };
+}
+
+// function getMeAnAPI(code) {
+//   return function(dispatch) {
+//     return receiveForecast().then(
+//
+//     )
+//   }
+// }
+
 export const showDummyData = (dummyData) => {
   return {
     type: 'SHOW_DATA',
     dummyData
   };
 };
-
-// store.dispatch(showDummyData(dummyData));
