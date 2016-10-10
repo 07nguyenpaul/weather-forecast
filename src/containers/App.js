@@ -4,16 +4,24 @@ import DetailedCity from './DetailedCity';
 import * as actionCreators from '../actions/actionCreators';
 import { bindActionCreators } from 'redux';
 
-const mapStateToProps = state => {
-  // return an object of redux store data
-  // that you'd like available in your component
+// const mapStateToProps = state => {
+//   // return an object of redux store data
+//   // that you'd like available in your component
+//   return {
+//     dummyData: state.dummyData
+//   };
+// };
+
+function mapStateToProps(state) {
+  console.log(state);
   return {
-    dummyData: state.dummyData
-  };
-};
+    dummyData: state
+  }
+}
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(actionCreators, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DetailedCity)
+const App = connect(mapStateToProps, mapDispatchToProps)(Main);
+export default App;

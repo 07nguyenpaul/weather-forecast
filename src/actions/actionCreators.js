@@ -1,5 +1,6 @@
 export const RECEIVE_FORECAST = 'RECEIVE_FORECAST';
 import dummyData from '../data/dummyData';
+import store from '../index';
 
 export const receiveForecast = forecastData => {
   return {
@@ -20,3 +21,5 @@ export const showDummyData = (dummyData) => {
     dummyData
   };
 };
+
+// store.dispatch(showDummyData(dummyData));
