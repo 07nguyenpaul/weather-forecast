@@ -21,7 +21,7 @@ export const fetchZipForecast = (forecastType, zip, key=API_KEY) => dispatch => 
 
 export const fetchByGPS = (forecastType, lat, long, key=API_KEY) => dispatch => {
   console.log('fetchbyGPS');
-  return fetch(`api.openweathermap.org/data/2.5/${forecastType}?lat=${lat}&lon=${long}&APPID=${key}`)
+  return fetch(`http://api.openweathermap.org/data/2.5/${forecastType}?lat=${lat}&lon=${long}&APPID=${key}`)
         .then(response =>response.json())
         .then(json => dispatch(receiveForecast(json)));
 };

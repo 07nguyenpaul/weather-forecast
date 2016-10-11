@@ -16,14 +16,14 @@ require('!style!css!sass!./styles/main.scss');
 // const middleware = [ thunk, createLogger ];
 
 const enhancers = compose(
-  window.devToolsExtension ? window.devToolsExtension() : f => f
+  applyMiddleware(thunk),
+  window.devToolsExtension ? window.devToolsExtension() : f => f,
 );
 
 const store = createStore(
   exampleReducer,
   {},
   enhancers,
-  applyMiddleware(thunk)
 );
 
 render(

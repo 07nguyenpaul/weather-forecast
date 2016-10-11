@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 // import App from '../components/App';
 import * as actionCreators from '../actions/actionCreators';
 import { bindActionCreators } from 'redux';
-import { fetchByGPS } from '../actions/actionCreators';
+// import { fetchByGPS } from '../actions/actionCreators';
 
 function mapStateToProps(state) {
   return state;
@@ -16,23 +16,23 @@ function mapDispatchToProps(dispatch) {
 
 class App extends Component {
 
-  getLatAndLong() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        let currentPosition = {
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude
-        };
-        fetchByGPS('weather', currentPosition.latitude, currentPosition.longitude);
-
-    });
-    } else {
-      console.error('navigator.geolocation object not found. No geolocation services available.');
-    }
-  }
 
   componentDidMount() {
-    this.getLatAndLong();
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          let currentPosition = {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude
+          };
+          this.props.fetchByGPS('weather', currentPosition.latitude, currentPosition.longitude);
+
+        });
+      } else {
+        console.error('navigator.geolocation object not found. No geolocation services available.');
+      }
+
+    console.log(this.props);
   }
 
   render(){
