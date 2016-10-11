@@ -30,7 +30,7 @@ const store = createStore(
   reducer,
   defaultState,
   enhancers,
-  applyMiddleware(...middleware)
+  applyMiddleware(thunk)
 );
 
 // export const history = syncHistoryWithStore(browserHistory, store);

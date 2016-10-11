@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 import DashboardCard from './DashboardCard';
 
@@ -8,7 +8,7 @@ const Dashboard = () => {
       <section className="cards">
         <DashboardCard />
         <article className="pinnedCityCard">
-          <h2>➕ Pin another city</h2>
+          <h2><Link to="/pinnedcities">➕ Pin another city</Link></h2>
         </article>
       </section>
       <h3><Link to="/pinnedcities">Edit Pinned Cities</Link></h3>

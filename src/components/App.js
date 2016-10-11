@@ -41,7 +41,7 @@ class App extends Component {
 
   componentDidMount() {
     this.getLatAndLong();
-    this.props.fetchByGPS('weather', )
+    this.props.fetchZipForecast('forecast', '80013')
   }
 
   render(){

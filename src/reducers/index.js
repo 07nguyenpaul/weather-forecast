@@ -1,4 +1,4 @@
-import { RECEIVE_FORECAST } from '../actions/actionCreators';
+// import { RECEIVE_FORECAST } from '../actions/actionCreators';
 
 const exampleReducer = (state = [], action) => {
   // console.log("this will change");
