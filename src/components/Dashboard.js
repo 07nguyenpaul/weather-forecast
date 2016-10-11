@@ -7,8 +7,8 @@ const Dashboard = (state) => {
   return (
     <div className="dashboardWrapper">
       <section className="cards">
-      {state.pinnedCities.length > 0 ?
-        state.pinnedCities.map(pinnedCity =>
+      { state.pinnedCities.length > 0 ?
+        state.pinnedCities.map( pinnedCity =>
           <DashboardCard
             key={pinnedCity.id}
             cityName={pinnedCity.name}
@@ -16,8 +16,8 @@ const Dashboard = (state) => {
             cityCondition={pinnedCity.weather[0].description}
           /> )
           : <article className="addPinnedCityCard">
-            <h2><Link to="/pinnedcities">➕ Pin another city</Link></h2>
-          </article>
+              <h2><Link to="/pinnedcities">➕ Pin another city</Link></h2>
+            </article>
       }
       </section>
       <h3 className="editPinnedCities"><Link to="/pinnedcities">Add Pinned Cities >></Link></h3>

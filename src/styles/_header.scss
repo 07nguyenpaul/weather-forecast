@@ -1,23 +1,29 @@
 .header {
   background-color: #1F4E5F;
   display: flex;
-  height: 75px;
+  height: 100px;
   margin-bottom: 1em;
   position: relative;
+  ul li {
+    margin-bottom: 5px;
+  }
+}
+
+.loadingMessage {
+  padding: 0 2em 0;
 }
 
 .currentForecast {
   color: #fff;
-  padding: 0 1em 0;
 }
 
 .currentWeatherDetail {
   color: #fff;
   position: absolute;
-  right: 30px;
+  right: 35px;
 }
 
 header h1 {
-  margin-left: .3em;
   font-size: 3em;
+  margin-left: .3em;
 }
