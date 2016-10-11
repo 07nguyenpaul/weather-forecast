@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../containers/Header';
 import { connect } from 'react-redux';
-// import App from '../components/App';
 import * as actionCreators from '../actions/actionCreators';
 import { bindActionCreators } from 'redux';
 
