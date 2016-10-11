@@ -1,29 +1,28 @@
-import { mockStore } from '../mocks/mockStore'
-import { Provider } from 'react-redux'
 import React from 'react';
+import { mockStore } from '../mocks/mockStore';
+import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
-import Main from './Main';
+import App from './App';
 import Header from './Header';
 import Dashboard from './Dashboard';
-import DetailedCity from './DetailedCity';
-import PinnedCities from './PinnedCities';
+import PinnedCities from './PinnedCitiesList';
 
-describe('Main Container', () => {
+describe('App Container', () => {
   function setup() {
     const store = mockStore({})
     const wrapper = mount(
       <Provider store={store}>
-        <Main />
+        <App />
       </Provider>
     )
 
-    const Component = wrapper.find(Main)
+    const Component = wrapper.find(App)
     return {
       Component
     }
   }
 
-  it('should render Main container', () => {
+  it('should render App container', () => {
     const { Component } = setup()
 
     expect(Component.length).toBeTruthy()
@@ -52,7 +51,6 @@ describe('Header Container', () => {
   });
 });
 
-
 describe('Dashboard Container', () => {
   function setup() {
     const store = mockStore({})
@@ -69,28 +67,6 @@ describe('Dashboard Container', () => {
   }
 
   it('should render Dashboard container', () => {
-    const { Component } = setup()
-
-    expect(Component.length).toBeTruthy()
-  });
-});
-
-describe('DetailedCity Container', () => {
-  function setup() {
-    const store = mockStore({})
-    const wrapper = mount(
-      <Provider store={store}>
-        <DetailedCity />
-      </Provider>
-    )
-
-    const Component = wrapper.find(DetailedCity)
-    return {
-      Component
-    }
-  }
-
-  it('should render DetailedCity container', () => {
     const { Component } = setup()
 
     expect(Component.length).toBeTruthy()
