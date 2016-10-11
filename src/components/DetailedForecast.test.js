@@ -6,6 +6,6 @@ describe('DetailedForecast', () => {
   it('should render as a <article> container', () => {
     const wrapper = mount(<DetailedForecast />);
 
-    expect(wrapper.type(), 'div');
+    expect(wrapper.type(), 'article');
   });
 });

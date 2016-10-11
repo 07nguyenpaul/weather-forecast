@@ -1,3 +1,9 @@
+.cards {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
 .cityName {
   font-size: 20px;
   font-weight: bold;
