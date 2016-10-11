@@ -1,6 +1,4 @@
-// import { receiveForecast } from '../actions/actionCreators';
-
-const exampleReducer = (state, action) => {
+const currentWeather = (state, action) => {
 
   switch (action.type) {
     case 'RECEIVE_FORECAST':
@@ -10,4 +8,4 @@ const exampleReducer = (state, action) => {
   }
 };
 
-export default exampleReducer;
+export default currentWeather;
