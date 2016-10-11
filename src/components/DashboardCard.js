@@ -33,7 +33,6 @@ class DashboardCard extends Component {
           <li>{Math.round(this.props.pinnedCities[0].main.temp)}&#8457;</li>
           <li>{this.props.pinnedCities[0].weather[0].description}</li>
           <li>Humidity: {this.props.pinnedCities[0].main.humidity} %</li>
-          <li>Elevation: {this.props.pinnedCities[0].main.sea_level} ft</li>
           <li>Pressure: {this.props.pinnedCities[0].main.pressure} mbar</li>
           <li>Wind Speed: {this.props.pinnedCities[0].wind.speed} units</li>
         </ul>
