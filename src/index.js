@@ -4,7 +4,7 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import currentWeather from './reducers/currentWeather';
+import rootReducer from './reducers/rootReducer';
 import App from './components/App';
 import Dashboard from './components/Dashboard';
 import PinnedCitiesList from './components/PinnedCitiesList';
@@ -18,7 +18,7 @@ const enhancers = compose(
 );
 
 const store = createStore(
-  currentWeather,
+  rootReducer,
   {},
   enhancers,
 );
