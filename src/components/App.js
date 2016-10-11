@@ -23,7 +23,7 @@ class App extends Component {
           longitude: position.coords.longitude
         };
         this.props.fetchByGPS('weather', currentPosition.latitude, currentPosition.longitude);
-
+        this.props.fetchByGPSForecast('forecast', currentPosition.latitude, currentPosition.longitude);
       });
     } else {
       console.error('navigator.geolocation object not found. No geolocation services available.');
