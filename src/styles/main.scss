@@ -3,7 +3,6 @@
 @import '_header.scss';
 @import'_dashboard.scss';
 @import '_dashboard-cards.scss';
-@import '_detailed-city.scss';
 @import '_pinned-cities.scss';
 
 * {
@@ -28,7 +27,7 @@ ul {
 @media screen and (max-width: 800) {
   .dashboardWrapper {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
 
   .cards {
