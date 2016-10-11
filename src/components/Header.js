@@ -17,7 +17,7 @@ const Header = ( state ) => {
 
                         : <p>Getting Local Weather ...</p>}
       </span>
-      <p><Link to="/detailedforecast">View Extended Forecast</Link></p>
+      <p><Link to="/detailedforecast" className="currentWeatherDetail">View Extended Forecast >></Link></p>
       </section>
     </header>
   );

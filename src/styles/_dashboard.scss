@@ -1,4 +1,4 @@
-.pinnedCityCard {
+.pinnedCityCard, .addPinnedCityCard {
   background-color: #fff;
   border: 1px solid black;
   height: 350px;
@@ -13,4 +13,9 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
+}
+
+.editPinnedCities {
+  margin-right: 5em;
+  text-align: right;
 }

@@ -29,17 +29,17 @@ class DashboardCard extends Component {
       <div>
       {this.props.pinnedCities[0] ?
         <ul>
-          <li>{this.props.pinnedCities[0].name}</li>
+          <li className="cityName">{this.props.pinnedCities[0].name}</li>
           <li>{Math.round(this.props.pinnedCities[0].main.temp)}&#8457;</li>
           <li>{this.props.pinnedCities[0].weather[0].description}</li>
           <li>Humidity: {this.props.pinnedCities[0].main.humidity} %</li>
           <li>Pressure: {this.props.pinnedCities[0].main.pressure} mbar</li>
           <li>Wind Speed: {this.props.pinnedCities[0].wind.speed} units</li>
         </ul>
-        : <p>gettin'</p>
+        : <p>gettin' weather</p>
       }
       </div>
-      <p><Link to="/detailedforecast">View Extended Forecast</Link></p>
+      <p><Link to="/detailedforecast">View Extended Forecast >></Link></p>
       </article>
     );
   };
