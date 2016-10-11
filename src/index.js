@@ -5,11 +5,12 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import reducer from './reducers';
+import exampleReducer from './reducers/index';
 import App from './components/App';
 import Dashboard from './components/Dashboard';
 import PinnedCitiesList from './components/PinnedCitiesList';
 import DetailedForecast from './components/DetailedForecast';
+
 
 require('!style!css!sass!./styles/main.scss');
 
@@ -23,11 +24,11 @@ const enhancers = compose(
 );
 
 const defaultState = {
-  data: dummyData
+  data: {}
 };
 
 const store = createStore(
-  reducer,
+  exampleReducer,
   defaultState,
   enhancers,
   applyMiddleware(thunk)
