@@ -6,9 +6,9 @@ import thunk from 'redux-thunk';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import rootReducer from './reducers/rootReducer';
 import App from './components/App';
-import Dashboard from './components/Dashboard';
+import Dashboard from './containers/Dashboard';
 import PinnedCitiesList from './components/PinnedCitiesList';
-import DetailedForecast from './components/DetailedForecast';
+import DetailedForecast from './containers/DetailedForecast';
 
 require('!style!css!sass!./styles/main.scss');
 

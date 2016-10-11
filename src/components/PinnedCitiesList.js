@@ -26,8 +26,9 @@ class PinnedCitiesList extends Component {
         <section className="pinnedCities">
           <h3>Pinned Cities:</h3>
             <ul>
-              <li>Pompeii</li>
-              <li>Atlantis</li>
+              <li>Hana</li>
+              <li>Anchorage</li>
+              <li>Broken Arrow</li>
             </ul>
           <form className="newCityForm" onSubmit={this.handleSubmit.bind(this)}>
             <input
