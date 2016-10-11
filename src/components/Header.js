@@ -12,6 +12,7 @@ const Header = ( state ) => {
                         ? <ul>
                             <li>Current forecast for {state.currentWeather.name}</li>
                             <li>Temp: {Math.round(state.currentWeather.main.temp)}&#8457;</li>
+                            <li>{state.currentWeather.weather[0].description}</li>
 
                         </ul>
 
