@@ -1,8 +1,16 @@
 .pinnedCityCard {
-  background-color: #e2f412;
+  background-color: #fff;
   border: 1px solid black;
-  display: inline-block;
   height: 350px;
-  vertical-align: top;
   width: 250px;
+}
+
+.dashboardWrapper {
+  display: block;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }

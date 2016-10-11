@@ -5,7 +5,7 @@ import DashboardCard from './DashboardCard';
 const Dashboard = () => {
   return (
     <div className="dashboardWrapper">
-      <section>
+      <section className="cards">
         <DashboardCard />
         <article className="pinnedCityCard">
           <h2>➕ Pin another city</h2>
