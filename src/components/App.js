@@ -27,11 +27,9 @@ class App extends Component {
 
     });
     } else {
-      console.error('navigator.geolocation object not found. No geolocation services available.')
+      console.error('navigator.geolocation object not found. No geolocation services available.');
     }
   }
-
-  // currentpos = this.getLatAndLong();
 
   componentDidMount() {
     this.getLatAndLong();
