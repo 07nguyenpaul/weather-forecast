@@ -2,7 +2,7 @@
 @import '_variables.scss';
 @import '_header.scss';
 @import'_dashboard.scss';
-@import '_pinned-cities.scss';
+@import '_dashboard-cards.scss';
 @import '_detailed-city.scss';
 
 * {
@@ -11,10 +11,26 @@
 
 body {
   background-color: #79A8A9;
-  font-family: 'Lato', sans-serif;
+  font-family: $font-lora;
 }
 
 a {
   color: #1F4E5F;
   text-decoration: none;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+}
+
+@media screen and (max-width: 800) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .editPinnedCities {
+    text-align: center;
+  }
 }

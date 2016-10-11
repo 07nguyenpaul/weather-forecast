@@ -19,11 +19,11 @@ const Dashboard = (props) => {
       <section className="cards">
         <DashboardCard props={props} />
         <DashboardCard props={props} />
-        <article className="pinnedCityCard">
+        <article className="addPinnedCityCard">
           <h2><Link to="/pinnedcities">➕ Pin another city</Link></h2>
         </article>
       </section>
-      <h3><Link to="/pinnedcities">Edit Pinned Cities</Link></h3>
+      <h3 className="editPinnedCities"><Link to="/pinnedcities">Edit Pinned Cities >></Link></h3>
     </div>
   );
 }

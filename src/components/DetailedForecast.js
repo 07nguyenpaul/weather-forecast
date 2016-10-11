@@ -25,7 +25,7 @@ class DetailedForecast extends Component {
           <li>Pressure: {this.props.currentWeather.main.pressure} hPa</li>
           <li>Wind Speed: {this.props.currentWeather.wind.speed} mph</li>
         </ul>
-        : <p>gettin'</p>
+        : <p>gettin' weather</p>
       }
       </div>
     );
