@@ -31,6 +31,7 @@ class PinnedCitiesList extends Component {
             </ul>
           <form className="newCityForm" onSubmit={this.handleSubmit.bind(this)}>
             <input
+              className="zipInput"
               type="number"
               placeholder="Zip Code"
               value={this.state.zipCode}
