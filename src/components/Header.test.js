@@ -16,10 +16,4 @@ describe('Header', () => {
 
     expect(wrapper.contains(title)).toEqual(true);
   });
-
-  xit('should have a <p> tag with the className of "currentForecast"', () => {
-    const wrapper = shallow(<Header />);
-
-    expect(wrapper.find('p').text()).toBe('currentForecast');
-  });
 });

@@ -7,28 +7,6 @@ import Header from './Header';
 import Dashboard from './Dashboard';
 import PinnedCities from './PinnedCitiesList';
 
-describe('App Container', () => {
-  function setup() {
-    const store = mockStore({})
-    const wrapper = mount(
-      <Provider store={store}>
-        <App />
-      </Provider>
-    )
-
-    const Component = wrapper.find(App)
-    return {
-      Component
-    }
-  }
-
-  it('should render App container', () => {
-    const { Component } = setup()
-
-    expect(Component.length).toBeTruthy()
-  });
-});
-
 describe('Header Container', () => {
   function setup() {
     const store = mockStore({})
@@ -45,6 +23,28 @@ describe('Header Container', () => {
   }
 
   it('should render Header container', () => {
+    const { Component } = setup()
+
+    expect(Component.length).toBeTruthy()
+  });
+});
+
+describe('DetailedForecast', () => {
+  function setup() {
+    const store = mockStore({})
+    const wrapper = mount(
+      <Provider store={store}>
+      <DetailedForecast />
+      </Provider>
+    )
+
+    const Component = wrapper.find(DetailedForecast)
+    return {
+      Component
+    }
+  }
+
+  it('should render App container', () => {
     const { Component } = setup()
 
     expect(Component.length).toBeTruthy()
