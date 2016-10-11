@@ -1,22 +1,19 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as actionCreators from '../actions/actionCreators';
+import React from 'react';
+import DetailedCity from './DetailedCity';
 
 const DetailedForecast = (state) => {
+  console.log(state)
 
     return (
       <div className="detailForecastWrapper">
-      {state.currentWeather.main ?
-        <ul>
-          <li>{state.currentWeather.name}</li>
-          <li>{Math.round(state.currentWeather.main.temp)}&#8457;</li>
-          <li>{state.currentWeather.weather[0].description}</li>
-          <li>Humidity: {state.currentWeather.main.humidity} %</li>
-          <li>Pressure: {state.currentWeather.main.pressure} hPa</li>
-          <li>Wind Speed: {state.currentWeather.wind.speed} mph</li>
-        </ul>
-        : <p>gettin weather</p>
+        {state.localWeatherForecast.list ?
+          state.localWeatherForecast.list.map(hourForecast =>
+          <DetailedCity
+            key={hourForecast.id}
+            date={hourForecast.dt_txt}
+            temp={hourForecast.main.temp}
+            condition={hourForecast.weather[0].description}
+          />) : <h3> Loading Detailed Forecast...</h3>
       }
       </div>
     );
