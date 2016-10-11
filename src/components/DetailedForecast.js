@@ -2,14 +2,13 @@ import React from 'react';
 import DetailedCity from './DetailedCity';
 
 const DetailedForecast = (state) => {
-  console.log(state)
-
     return (
       <div className="detailForecastWrapper">
+        <h1>Denver</h1>
         {state.localWeatherForecast.list ?
           state.localWeatherForecast.list.map(hourForecast =>
           <DetailedCity
-            key={hourForecast.id}
+            key={hourForecast.dt}
             date={hourForecast.dt_txt}
             temp={hourForecast.main.temp}
             condition={hourForecast.weather[0].description}
