@@ -1,12 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router';
 import DashboardCard from './DashboardCard';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actionCreators from '../actions/actionCreators';
 
-const Dashboard = () => {
+
+const mapStateToProps = (state) => {
+ return state;
+};
+
+const mapDispatchToProps = (dispatch) => {
+ return bindActionCreators(actionCreators, dispatch);
+};
+
+const Dashboard = (props) => {
   return (
     <div className="dashboardWrapper">
       <section className="cards">
-        <DashboardCard />
+        <DashboardCard props={props} />
+        <DashboardCard props={props} />
         <article className="pinnedCityCard">
           <h2><Link to="/pinnedcities">➕ Pin another city</Link></h2>
         </article>
@@ -16,4 +29,4 @@ const Dashboard = () => {
   );
 }
 
-export default Dashboard;
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
