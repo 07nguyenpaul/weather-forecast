@@ -1,5 +1,5 @@
 export const RECEIVE_FORECAST = 'RECEIVE_FORECAST';
-import dummyData from '../data/dummyData';
+// import dummyData from '../data/dummyData';
 // import store from '../index';
 
 const API_KEY='391d9430997a4787c74ca34ca02f4dc1';
@@ -24,9 +24,9 @@ export const fetchByGPS = (forecastType, lat, long, key=API_KEY) => dispatch => 
 };
 
 
-export const showDummyData = (dummyData) => {
-  return {
-    type: 'SHOW_DATA',
-    dummyData
-  };
-};
+// export const showDummyData = (dummyData) => {
+//   return {
+//     type: 'SHOW_DATA',
+//     dummyData
+//   };
+// };
