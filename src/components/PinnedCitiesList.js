@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class PinnedCitiesList extends Component {
   constructor(props) {
     super(props);
@@ -15,6 +16,7 @@ class PinnedCitiesList extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.fetchZipForecast('weather', this.state.zipCode);
     this.setState({
       zipCode: '',
     });
