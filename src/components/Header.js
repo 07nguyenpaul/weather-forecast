@@ -8,10 +8,10 @@ const Header = ( state ) => {
       <h1><Link to="/">Weather Tracker</Link></h1>
       <section className="header">
       <span className="currentForecast">
-      {state.props.currentWeather.main
+      {state.currentWeather.main
                         ? <ul>
-                            <li>Current forecast for {state.props.currentWeather.name}</li>
-                            <li>Temp: {Math.round(state.props.currentWeather.main.temp)}&#8457;</li>
+                            <li>Current forecast for {state.currentWeather.name}</li>
+                            <li>Temp: {Math.round(state.currentWeather.main.temp)}&#8457;</li>
 
                         </ul>
 
