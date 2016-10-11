@@ -1,8 +1,7 @@
-// import {combineReducers} from 'redux';
-// import { routerReducer } from 'react-router-redux';
-//
-// import dummyData from './dummyData';
-//
-// const reducer = combineReducers({ dummyData, routing: routerReducer});
-//
-// export default reducer;
+import {combineReducers} from 'redux';
+import currentWeather from './currentWeather';
+import pinnedCities from './pinnedCities';
+
+const rootReducer = combineReducers({ currentWeather, pinnedCities });
+
+export default rootReducer;

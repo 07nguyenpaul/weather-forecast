@@ -1,11 +1,14 @@
 import { connect } from 'react-redux';
-import Dashboard from './components/Dashboard';
+import Dashboard from '../components/Dashboard';
+import * as actionCreators from '../actions/actionCreators';
+import { bindActionCreators } from 'redux';
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-
-  };
+const mapStateToProps = (state) => {
+ return state;
 };
 
+const mapDispatchToProps = (dispatch) => {
+ return bindActionCreators(actionCreators, dispatch);
+};
 
-export default connect(null, mapDispatchToProps)(Dashboard);
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

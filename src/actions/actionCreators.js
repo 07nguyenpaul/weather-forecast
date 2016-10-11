@@ -8,11 +8,17 @@ export const receiveForecast = forecastData => {
     currentWeather: forecastData
   };
 };
+export const receiveForecastByZip = forecastData => {
+  return {
+    type: 'RECEIVE_ZIP_FORECAST',
+    currentWeatherByZip: forecastData
+  };
+};
 
 export const fetchZipForecast = (forecastType, zip, key=API_KEY) => dispatch => {
   return fetch(`http://api.openweathermap.org/data/2.5/${forecastType}?zip=${zip},us&APPID=${key}&units=imperial`)
         .then(response =>response.json())
-        .then(json => dispatch(receiveForecast(json)));
+        .then(json => dispatch(receiveForecastByZip(json)));
 };
 
 export const fetchByGPS = (forecastType, lat, long, key=API_KEY) => dispatch => {

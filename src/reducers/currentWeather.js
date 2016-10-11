@@ -1,4 +1,4 @@
-const currentWeather = (state, action) => {
+const currentWeather = (state={}, action) => {
 
   switch (action.type) {
     case 'RECEIVE_FORECAST':
