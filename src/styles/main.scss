@@ -24,18 +24,13 @@ ul {
   text-align: left;
 }
 
-@media screen and (max-width: 800) {
-  .dashboardWrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .editPinnedCities {
+@media screen and (max-width: 520px) {
+  header h1 {
+    font-size: 2.4em;
     text-align: center;
+  }
+
+  .currentWeatherDetail {
+    display: none;
   }
 }

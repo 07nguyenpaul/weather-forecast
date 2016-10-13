@@ -1,15 +1,12 @@
 .pinnedCityCard, .addPinnedCityCard {
   background-color: #fff;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
   height: 350px;
   width: 250px;
 }
 
-.dashboardWrapper {
-  display: block;
-}
-
 .editPinnedCities {
-  margin-right: 5em;
-  text-align: right;
+  text-align: center;
 }
