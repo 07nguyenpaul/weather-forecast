@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import DashboardCard from './DashboardCard';
 
-
 const Dashboard = (state) => {
   return (
     <div className="dashboardWrapper">

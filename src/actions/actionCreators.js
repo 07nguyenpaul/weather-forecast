@@ -8,7 +8,7 @@ export const receiveForecast = forecastData => {
 };
 
 export const receiveForecastByZip = forecastData => {
-  return {
+    return {
     type: 'RECEIVE_ZIP_FORECAST',
     currentWeatherByZip: forecastData
   };
